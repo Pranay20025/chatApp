@@ -1,0 +1,52 @@
+/* Main Layout */
+.homepage {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #1e1e2f, #0d0d1e);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Glowing Gradient Blur */
+.blur {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(155, 89, 182, 0.4), transparent);
+  border-radius: 50%;
+  filter: blur(100px);
+  top: 20%;
+  left: 20%;
+  z-index: 0;
+  animation: float 8s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(30px, -20px);
+  }
+}
+
+/* Main Containers */
+.container,
+.container2 {
+  width: 92%;
+  height: 88%;
+  background: rgba(28, 27, 41, 0.95);
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
+  display: flex;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+}
+
